@@ -5,76 +5,98 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" type="image/png" href="assets/images/goku_ico.png" <title>Portfolio Bianca</title>
+    <title>Portfólio da Bianca</title>
+    <link rel="icon" type="image/png" href="assets/images/lightning_thunderbolt_thunder_icon_185978.ico">
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-<!-- Menu da página-->
+    <!-- Menu da página-->
     <nav>
-<!-- Logo + texto à esquerda do menu-->
-        <div>
-            <img src="assets/images/goku_ico.png" alt="Logo da page - Goku">
-            <span>Página de contato</span>
+        <!-- Logo + texto à esquerda do menu-->
+        <div class="logo">
+            <img src="assets/images/woman_icon_224666.ico" alt="Logo da page - Bianca">
+            <span class="titulo">Página de contato</span>
         </div>
 
-<!--Opções do menu utilizando marcadores-->
-    <ul>
-        </p>
-            <a href = "index.html">
-                <li>Home</li>
+        <!--Opções do menu utilizando marcadores-->
+        <ul>
             </p>
-        </a>
+            <a href="index.html">
+                <li>Home</li>
+                </p>
+            </a>
 
-            <a href="sobre.html">
-                <li>Sobre</li>
-        </a>
-    </ul>
+            <a href="contato.html">
+                <li>Contato</li>
+            </a>
+        </ul>
     </nav>
 
-<!-- Conteúdo da página-->
-    <main>
+    <!-- Conteúdo da página-->
 
-        <section>
-            <form>
-                <h2>Contato</h2>
-                <div>
-                    <label for="nome">Nome:</label>
-                    <input id="nome" type="text" placeholder="Preenchimento obrigatório">
-                    <div id="txtNome"></div>
-                </div>
-                <div>
-                    <label for="email">Email:</label>
-                    <input id="email" type="text" placeholder="E-mail">
-                    <div id="txtEmail"></div>
-                </div>
-                <div>
-                    <label for="mensagem">Mensagem:</label>
-                    <textarea id="mensagem" type="text" rows="8" 
-                    placeholder="Escreva sua mensagem"></textarea>
-                <div id= "txtEmail"></div>
+ <main class="contato">
+    <section class="formulario">
+        <!-- Formulário da Esquerda -->
+        <form>
+            <h3>Contato:</h3>
+            <div class="campos-form">
+                <label for="nome">Nome:</label>
+                <input oninput="validarNome()" id="nome" type="text" placeholder="Nome Sobrenome"> 
+                <div id="txtNome"></div>
             </div>
-            <button type="button">
-                Enviar
-            </button>
+            <div class="campos-form">
+                <label for="email">E-mail:</label>
+                <input oninput="validarEmailRegex()" id="email" type="text" placeholder="email@email.com"> 
+                <div id="txtEmail"></div>
+            </div>
+            <div class="campos-form">
+                <label for="mensagem">Mensagem:</label>
+                <textarea oninput="validarMensagem()" id="mensagem" type="text" rows="8" placeholder="Digite aqui sua mensagem"></textarea>
+                <div id="txtMensagem"></div>
+            </div>
+            <button onclick="enviarFormulario()" type="button">Enviar</button>
         </form>
-        </section>
-    </main>
+
+        <!-- Formulário da Direita -->
+
+        <form>
+            <section>
+                <h3>Consulta de CEP</h3>
+                <div class="endereco">
+                    <div class="campos-form">
+                        <label for="cep">CEP:</label>
+                        <input onkeyup="validarCep()" id="cep" name="cep" type="text" placeholder="Digite o número do CEP">
+                        <div id="txtCep"></div>
+                    </div>
+                    <button type="button" onclick="consultarCep()">
+                        Consultar
+                    </button>
+                    <hr>
+                    <div class="campos-form">
+                        <label for="dados">Endereço:</label>
+                        <textarea id="dados" name="dados" rows="7" placeholder="Busca CEP..."></textarea>
+                        <div id="txtCep"></div>
+                    </div>
+                </div>
+            </section>
+</main>
 
 
 
     <footer>
         <div>
             <p>
-            <a href="https://www.linkedin.com/in/bianca-luna-88aaa7116/" target="_blank">
-                <img src="assets/images/linkedin.png" alt="LinkedIn">
-            </a>
+                <a href="https://www.linkedin.com/in/bianca-luna-88aaa7116/" target="_blank">
+                    <img src="assets/images/linkedin.png" alt="LinkedIn">
+                </a>
 
-            <a href="https://github.com/r4inha" target="_blank">
-                <img src="assets/images/github.png" alt="GitHub">
-            </a>
+                <a href="https://github.com/r4inha" target="_blank">
+                    <img src="assets/images/github.png" alt="GitHub">
+                </a>
 
-            <a href="https://www.instagram.com/r4inha_/" target="_blank">
-                <img src="assets/images/instagram.png" alt="Instagram">
+                <a href="https://www.instagram.com/r4inha_/" target="_blank">
+                    <img src="assets/images/instagram.png" alt="Instagram">
             </p>
             </a>
         </div>
